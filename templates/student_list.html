@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{#<ul>#}
+{#{% for i in  Student_list%}#}
+{#    <a href="student/{{ i.id }}"><li>{{ i.name }}</li></a>#}
+{#    {% endfor %}#}
+{##}
+{#    </ul>#}
+
+    <ul class="collection with-header">
+        <li class="collection-header"><h4>First Names</h4></li>
+    {% for i in  Student_list%}
+        <li class="collection-item"><div>{{ i.name }}<a href="student/{{ i.id }}" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+
+    {% endfor %}
+      </ul>
+{% endblock %}
+

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>{{ Student.name }}</h1>
+
+
+    {% for i in ShowComments %}
+        <div class="card-panel">
+       <p>{{ i.comment_text }}</p>
+        </div>
+    {% endfor %}
+
+<form id="comment_form" method="post">
+
+            {% csrf_token %}
+    {{ form }}
+
+
+<button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
+        </form>
+
+{% endblock %}
